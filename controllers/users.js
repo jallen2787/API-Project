@@ -41,7 +41,7 @@ export const createUser = async (req, res) => {
   export const deleteUser = async (req, res) => {
     try {
       const { id } = req.params;
-      const deleted = await House.findByIdAndDelete(id);
+      const deleted = await User.findByIdAndDelete(id);
   
       if (deleted) {
         return res.status(200).send("User deleted!");
